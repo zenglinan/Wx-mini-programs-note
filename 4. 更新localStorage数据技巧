@@ -1,0 +1,6 @@
+将里面原有的指定数据取出，处理完后覆盖设置
+```
+let history = wx.getStorageSync('history')||[]
+history.unshift({ query: this.data.query, result: res.trans_result[0].dst})
+wx.setStorageSync('history', history)
+```
